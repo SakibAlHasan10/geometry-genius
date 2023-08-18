@@ -40,12 +40,12 @@ function addSum(addFiled, addValue) {
 
 function areaCalculation(addCard, target){
     const areaDiv = document.getElementById('area-calculation');
-    const CardTitle = target.parentNode.parentNode.parentNode.childNodes[1].innerText;
+    const CardTitle = target.parentNode.parentNode.parentNode.childNodes[1];
     const CardTitleInnerText = CardTitle.innerText;
     const count = areaDiv.childElementCount;
     const p = document.createElement('p');
     p.innerHTML=`
-    ${count+1} ${CardTitleInnerText}  ${addCard} cm<sup>2</sup> <button class='btn bg-red-600 text-white text-xs my-2 ml-2 hover:bg-slate-400 justify-end'>Convert</button>
+    ${count+1}. ${CardTitleInnerText}  ${addCard} cm<sup>2</sup> <button class='btn bg-red-600 text-white text-xs my-2 ml-2 hover:bg-slate-400 justify-end'>Convert</button>
 
     `
     areaDiv.appendChild(p);
